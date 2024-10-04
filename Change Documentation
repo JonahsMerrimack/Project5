@@ -1,0 +1,76 @@
+# Change Log: From LinkedList to Stack
+
+## Overview
+
+This document outlines the changes made during the maintenance task of refactoring the original `SortedLinkedList` program into the `SortedStack` program. The goal of this maintenance task was to replace the use of a `LinkedList` with a `Stack` while preserving core functionality, such as reading input, sorting integers, and outputting the results.
+
+---
+
+## Key Changes
+
+### 1. **Data Structure Switch**
+   - **Original**: The original program used a `LinkedList` to store the integers.
+   - **Updated**: The updated program now uses a `Stack` to store integers.
+
+   **Code Example**:
+   ```java
+   // Before (using LinkedList)
+   LinkedList<Integer> numbers = new LinkedList<>();
+   
+   // After (using Stack)
+   Stack<Integer> numbers = new Stack<>();
+   ```
+
+### 2. **Method Changes: `add()` to `push()`**
+   - **Original**: The `LinkedList` used the `add()` method to append integers to the list.
+   - **Updated**: The `Stack` uses the `push()` method to insert integers onto the stack.
+   
+   **Code Example**:
+   ```java
+   // Before (LinkedList)
+   numbers.add(number);
+   
+   // After (Stack)
+   numbers.push(number);
+   ```
+
+### 3. **Stack-Specific Method: `peek()`**
+   - **Original**: No stack-specific methods were used since the program was based on a `LinkedList`.
+   - **Updated**: The updated program now demonstrates the `Stack` behavior by optionally showing the "top" element using the `peek()` method after sorting.
+   
+   **Code Example**:
+   ```java
+   if (!numbers.isEmpty()) {
+       System.out.println("Top element (peek): " + numbers.peek());
+   }
+   ```
+
+### 4. **Sorting and Output**
+   - **No Change**: The sorting of the numbers using `Collections.sort()` and the output functionality remained unchanged between both versions. The `Collections` framework is compatible with both `LinkedList` and `Stack`.
+
+   **Code Example**:
+   ```java
+   Collections.sort(numbers);
+   System.out.println("Sorted stack: " + numbers);
+   ```
+
+### 5. **Program Name Change**
+   - **Original**: The class was named `SortedLinkedList`.
+   - **Updated**: The class was renamed to `SortedStack` to reflect the change in data structure.
+
+   **Code Example**:
+   ```java
+   public class SortedStack {
+       // Class implementation
+   }
+   ```
+
+---
+
+## Summary of Changes
+
+- **Refactoring**: The core data structure was switched from `LinkedList` to `Stack`, ensuring that all methods were adapted to reflect this change.
+- **Minimal Impact**: The program's logic, structure, and functionality remain mostly intact, with the main differences being the switch to stack operations like `push()` and `peek()`.
+- **Stack-Specific Behavior**: The updated program now includes a demonstration of stack behavior, such as viewing the top element with `peek()`, which was not possible with the `LinkedList`.
+
+This refactor showcases how the flexibility of Java's Collections Framework allows for easy adaptation between different data structures with minimal disruption to the existing functionality.
