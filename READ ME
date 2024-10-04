@@ -1,0 +1,75 @@
+# SortedStack Program
+
+## Overview
+
+The **SortedStack** program is a simple Java application that reads a list of integers from user input, stores them in a `Stack`, sorts the integers in ascending order, and displays the sorted stack. The program leverages Java's **Collections Framework** to handle sorting and stack operations.
+
+This project demonstrates a maintenance task where the original code using a `LinkedList` has been adapted to use a `Stack` instead. The structure of the program, its functionality, and code reuse practices follow common Java coding guidelines.
+
+## Features
+
+- Accepts integer input from the command line.
+- Stores input in a `Stack` data structure.
+- Sorts the `Stack` in ascending order using the `Collections.sort()` method.
+- Outputs the sorted integers and shows the top element using the `peek()` method.
+- Handles non-integer inputs gracefully by prompting the user to try again.
+
+## Requirements
+
+- **Java Development Kit (JDK)** installed (version 8 or higher).
+- This program can be run via the command line or a terminal.
+
+## How to Run
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/yourusername/SortedStack.git
+   ```
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd SortedStack
+   ```
+
+3. **Compile the Java file:**
+   ```bash
+   javac SortedStack.java
+   ```
+
+4. **Run the program:**
+   ```bash
+   java SortedStack
+   ```
+
+5. **Enter integers:**
+   - Type integers followed by the Enter key.
+   - When done, type `exit` to finish input.
+
+6. **Example:**
+   ```
+   Enter integers (type 'exit' to finish):
+   5
+   10
+   3
+   exit
+   Sorted stack: [3, 5, 10]
+   Top element (peek): 10
+   ```
+
+## Code Documentation
+
+You can generate the Javadoc for this project using the following command:
+
+```bash
+javadoc -d doc SortedStack.java
+```
+
+This will create a `doc` folder containing the HTML documentation for the project.
+
+## Author
+
+**Jonah Wilson**  
+*Since*: 2024-09-30
+
+---
+
